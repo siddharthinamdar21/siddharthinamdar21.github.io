@@ -43,6 +43,22 @@
       var thumb = document.createElement("div");
       thumb.className = "card-thumb";
       PF.projectImg(p, thumb);
+
+      /* Tell the visitor there is footage behind the card before they click. */
+      if (PF.primaryVideo(p)) {
+        var play = document.createElement("span");
+        play.className = "play-badge";
+        play.textContent = "Watch";
+        thumb.appendChild(play);
+      }
+      /* Grouped projects (six Plinko builds, five Slots) say so up front —
+         the count is the interesting part, not the single poster frame. */
+      if (p.videos && p.videos.length > 1) {
+        var variants = document.createElement("span");
+        variants.className = "variant-badge";
+        variants.textContent = p.videos.length + " variants";
+        thumb.appendChild(variants);
+      }
       card.appendChild(thumb);
 
       var body = document.createElement("div");

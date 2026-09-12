@@ -11,6 +11,37 @@
   var projectRoot = document.getElementById("projectRoot");
   if (!projectRoot) return;
 
+  /* ---------------- Back link ----------------
+     The markup hardcodes "All projects", so arriving from the home page sent
+     you somewhere you had never been. Point the link at wherever you actually
+     came from, and go through history rather than a fresh navigation so the
+     grid you left is restored at the scroll position you left it. */
+
+  (function retargetBack() {
+    var back = projectRoot.querySelector(".pd-back");
+    if (!back || !document.referrer) return;
+
+    var from;
+    try { from = new URL(document.referrer, window.location.href); } catch (e) { return; }
+    if (from.origin !== window.location.origin) return;        /* arrived from elsewhere */
+    if (/\/pages\/project\//.test(from.pathname)) return;      /* another detail page */
+
+    var label =
+      /\/pages\/projects\//.test(from.pathname) ? "All projects" :
+      /\/pages\/about\//.test(from.pathname)    ? "Back to about" :
+      /\/pages\/contact\//.test(from.pathname)  ? "Back to contact" :
+      "Back to home";
+
+    back.textContent = "← " + label;
+    back.href = document.referrer;   /* real href, so middle-click still works */
+    back.addEventListener("click", function (e) {
+      if (window.history.length > 1) {
+        e.preventDefault();
+        window.history.back();
+      }
+    });
+  })();
+
   /* ---------------- Media ---------------- */
 
   /* Click-to-play YouTube: shows a thumbnail until clicked, so the page
