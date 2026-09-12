@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Siddharth Inamdar — Unity Game Developer</title>
+  <meta name="description" content="Portfolio of Siddharth Inamdar, a Unity developer with 3+ years of professional experience shipping mobile games — casino, casual and hyper-casual titles, wellness apps, prototypes and more." />
+
+  <!-- Open Graph (link previews on LinkedIn, WhatsApp, etc.) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Siddharth Inamdar — Unity Game Developer" />
+  <meta property="og:description" content="3+ years shipping mobile games in Unity. A live Google Play title, company games, prototypes, AR experiments and board game design." />
+  <meta property="og:image" content="assets/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+  <!-- Set theme before first paint (no flash). Dark is the default brand look. -->
+  <script>
+    (function () {
+      var t = localStorage.getItem("theme");
+      if (!t) t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches) ? "light" : "dark";
+      document.documentElement.setAttribute("data-theme", t);
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:ital,wght@0,600;0,700;1,800;1,900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="top">
+    <div class="nav-inner container">
+      <a href="index.html" class="wordmark">Siddharth&nbsp;<span>Inamdar</span></a>
+      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="pages/about/index.html">About</a>
+        <a href="pages/projects/index.html">Projects</a>
+        <a href="pages/contact/index.html">Contact</a>
+        <a class="btn btn-outline btn-sm" href="assets/resume/Siddharth_Inamdar_Resume.pdf" download>Résumé</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm0 2a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0v-1a1 1 0 0 1 1-1zm0-16a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0V4a1 1 0 0 1 1-1zm9 8a1 1 0 1 1 0 2h-1a1 1 0 1 1 0-2h1zM4 11a1 1 0 1 1 0 2H3a1 1 0 1 1 0-2h1zm14.66-6.07a1 1 0 0 1 0 1.41l-.7.71a1 1 0 1 1-1.42-1.41l.71-.71a1 1 0 0 1 1.41 0zM7.46 16.54a1 1 0 0 1 0 1.41l-.71.71a1 1 0 0 1-1.41-1.41l.7-.71a1 1 0 0 1 1.42 0zm11.2 2.12a1 1 0 0 1-1.41 0l-.71-.7a1 1 0 0 1 1.42-1.42l.7.71a1 1 0 0 1 0 1.41zM6.05 4.93a1 1 0 0 1 1.41 0l.71.7A1 1 0 1 1 6.75 7.05l-.7-.71a1 1 0 0 1 0-1.41z"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg>
+        </button>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero container">
+      <img class="hero-photo" id="heroPhoto" src="assets/images/profile.jpg" alt="Siddharth Inamdar"
+           onerror="this.style.display='none'" />
+      <p class="eyebrow" id="heroTitle">Unity Game Developer</p>
+      <h1>Hi, I'm Siddharth.<br />I build &amp; ship <span class="accent">mobile games</span>.</h1>
+      <p class="hero-sub" id="heroTagline"></p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#projects">View my work</a>
+        <a class="btn btn-outline" href="assets/resume/Siddharth_Inamdar_Resume.pdf" download>Download résumé</a>
+      </div>
+      <ul class="hero-stats" id="heroStats"></ul>
+    </section>
+
+    <!-- ============ SCOPE TABS (drives everything below) ============ -->
+    <section class="container scope-section" aria-label="Work type">
+      <div class="scope-tabs reveal" id="projectScope" role="tablist" aria-label="Work type"></div>
+    </section>
+
+    <!-- ============ HIGHLIGHTS ============ -->
+    <section class="section section-tight container" id="highlights" aria-label="Highlights">
+      <div class="highlights" id="highlightCards"></div>
+    </section>
+
+    <!-- ============ SHOWCASE (rotating hero banner) ============ -->
+    <section class="section section-tight container" id="showcaseSection" aria-label="Featured project showcase">
+      <div class="showcase reveal" id="showcaseWrap"></div>
+    </section>
+
+    <!-- ============ SPOTLIGHT (featured projects) ============ -->
+
+    <section class="section section-alt" id="spotlight" hidden>
+      <div class="container">
+        <h2 class="section-title reveal">Spotlight</h2>
+        <p class="section-sub reveal">The work I'm most proud of — shipped titles and production projects.</p>
+        <div class="spotlight" id="spotlightRows"></div>
+      </div>
+    </section>
+
+    <!-- ============ ALL PROJECTS ============ -->
+    <section class="section" id="projects">
+      <div class="container">
+        <h2 class="section-title reveal" id="projectsTitle">All Projects</h2>
+        <p class="section-sub reveal" id="projectsSub"></p>
+        <div class="filters reveal" id="filters" role="tablist" aria-label="Project categories"></div>
+        <div class="grid" id="projectGrid" data-limit="9" data-scope="true"></div>
+        <div class="project-more reveal" id="projectMore" hidden></div>
+      </div>
+    </section>
+
+    <!-- ============ BOARD GAME ============ -->
+    <section class="section section-alt" id="boardgame" hidden>
+      <div class="container">
+        <h2 class="section-title reveal">A Board Game Made By Me</h2>
+        <p class="section-sub reveal">Not everything I design runs on a screen — a complete tabletop game built academically: board, cards, dice and all.</p>
+        <div id="boardRows"></div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section" id="contact">
+      <div class="container">
+        <h2 class="section-title reveal">Let's work together</h2>
+        <p class="section-sub reveal" id="contactSub">I'm currently open to new opportunities. Reach out and I'll get back to you soon.</p>
+        <div class="contact-grid">
+          <form id="contactForm" class="contact-form reveal">
+            <div class="form-row">
+              <label>Name<input type="text" name="name" required autocomplete="name" /></label>
+              <label>Email<input type="email" name="email" required autocomplete="email" /></label>
+            </div>
+            <label>Message<textarea name="message" rows="5" required></textarea></label>
+            <button type="submit" class="btn btn-primary">Send message</button>
+            <p class="form-status" id="formStatus" role="status"></p>
+          </form>
+          <div class="contact-side reveal" id="contactSide"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> <span class="footer-name">Siddharth Inamdar</span></span>
+      <span class="muted" id="footerMeta"></span>
+    </div>
+  </footer>
+
+  <script src="data/profile.js"></script>
+  <script src="data/about.js"></script>
+  <script src="data/home.js"></script>
+  <script src="data/projects.js"></script>
+  <script src="js/core.js"></script>
+  <script src="js/grid.js"></script>
+  <script src="js/contact.js"></script>
+  <script src="js/pages/home.js"></script>
+</body>
+</html>

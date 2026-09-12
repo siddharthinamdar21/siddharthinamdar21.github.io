@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — Siddharth Inamdar</title>
+  <meta name="description" content="Projects by Siddharth Inamdar — company games, a live Google Play title, prototypes, academic projects, AR experiments and board game design." />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Projects — Siddharth Inamdar" />
+  <meta property="og:description" content="Company games, a live Google Play title, prototypes, academic projects and board game design." />
+  <meta property="og:image" content="../../assets/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg" />
+
+  <script>
+    (function () {
+      var t = localStorage.getItem("theme");
+      if (!t) t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches) ? "light" : "dark";
+      document.documentElement.setAttribute("data-theme", t);
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:ital,wght@0,600;0,700;1,800;1,900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../../css/style.css" />
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="top">
+    <div class="nav-inner container">
+      <a href="../../index.html" class="wordmark">Siddharth&nbsp;<span>Inamdar</span></a>
+      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+        <a href="../../index.html">Home</a>
+        <a href="../about/index.html">About</a>
+        <a href="../projects/index.html" aria-current="page">Projects</a>
+        <a href="../contact/index.html">Contact</a>
+        <a class="btn btn-outline btn-sm" href="../../assets/resume/Siddharth_Inamdar_Resume.pdf" download>Résumé</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm0 2a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0v-1a1 1 0 0 1 1-1zm0-16a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0V4a1 1 0 0 1 1-1zm9 8a1 1 0 1 1 0 2h-1a1 1 0 1 1 0-2h1zM4 11a1 1 0 1 1 0 2H3a1 1 0 1 1 0-2h1zm14.66-6.07a1 1 0 0 1 0 1.41l-.7.71a1 1 0 1 1-1.42-1.41l.71-.71a1 1 0 0 1 1.41 0zM7.46 16.54a1 1 0 0 1 0 1.41l-.71.71a1 1 0 0 1-1.41-1.41l.7-.71a1 1 0 0 1 1.42 0zm11.2 2.12a1 1 0 0 1-1.41 0l-.71-.7a1 1 0 0 1 1.42-1.42l.7.71a1 1 0 0 1 0 1.41zM6.05 4.93a1 1 0 0 1 1.41 0l.71.7A1 1 0 1 1 6.75 7.05l-.7-.71a1 1 0 0 1 0-1.41z"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg>
+        </button>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ PAGE HEADER ============ -->
+    <section class="page-header container">
+      <p class="eyebrow">Portfolio</p>
+      <h1>Everything I've <span class="accent">built</span>.</h1>
+    </section>
+
+    <!-- ============ ALL PROJECTS ============ -->
+    <section class="section section-tight" id="projects">
+      <div class="container">
+        <p class="section-sub reveal">Company work, published games, prototypes, academic projects and board game design — click any card for details.</p>
+        <div class="filters reveal" id="filters" role="tablist" aria-label="Project categories"></div>
+        <div class="grid" id="projectGrid"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> <span class="footer-name">Siddharth Inamdar</span></span>
+      <span class="muted" id="footerMeta"></span>
+    </div>
+  </footer>
+
+  <script src="../../data/profile.js"></script>
+  <script src="../../data/projects.js"></script>
+  <script src="../../js/core.js"></script>
+  <script src="../../js/grid.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+# Normalise line endings for text, but never rewrite binaries.
+#
+# This matters for assets/resume/*.pdf in particular: that file contains no NUL
+# bytes, so Git's automatic binary detection classifies it as text and would
+# apply CRLF conversion on checkout, corrupting the PDF. Marking the extensions
+# explicitly is the reliable fix.
+
+* text=auto
+
+*.pdf  binary
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.ico  binary
+*.webp binary
+*.mp4  binary

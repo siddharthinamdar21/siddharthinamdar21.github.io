@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Siddharth Inamdar</title>
+  <meta name="description" content="About Siddharth Inamdar — Unity developer with 3+ years of professional experience: work history, education, skills and strengths." />
+
+  <meta property="og:type" content="profile" />
+  <meta property="og:title" content="About — Siddharth Inamdar" />
+  <meta property="og:description" content="Unity developer with 3+ years shipping mobile games. Experience, education and skills." />
+  <meta property="og:image" content="../../assets/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg" />
+
+  <script>
+    (function () {
+      var t = localStorage.getItem("theme");
+      if (!t) t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches) ? "light" : "dark";
+      document.documentElement.setAttribute("data-theme", t);
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:ital,wght@0,600;0,700;1,800;1,900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../../css/style.css" />
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="top">
+    <div class="nav-inner container">
+      <a href="../../index.html" class="wordmark">Siddharth&nbsp;<span>Inamdar</span></a>
+      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+        <a href="../../index.html">Home</a>
+        <a href="../about/index.html" aria-current="page">About</a>
+        <a href="../projects/index.html">Projects</a>
+        <a href="../contact/index.html">Contact</a>
+        <a class="btn btn-outline btn-sm" href="../../assets/resume/Siddharth_Inamdar_Resume.pdf" download>Résumé</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm0 2a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0v-1a1 1 0 0 1 1-1zm0-16a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0V4a1 1 0 0 1 1-1zm9 8a1 1 0 1 1 0 2h-1a1 1 0 1 1 0-2h1zM4 11a1 1 0 1 1 0 2H3a1 1 0 1 1 0-2h1zm14.66-6.07a1 1 0 0 1 0 1.41l-.7.71a1 1 0 1 1-1.42-1.41l.71-.71a1 1 0 0 1 1.41 0zM7.46 16.54a1 1 0 0 1 0 1.41l-.71.71a1 1 0 0 1-1.41-1.41l.7-.71a1 1 0 0 1 1.42 0zm11.2 2.12a1 1 0 0 1-1.41 0l-.71-.7a1 1 0 0 1 1.42-1.42l.7.71a1 1 0 0 1 0 1.41zM6.05 4.93a1 1 0 0 1 1.41 0l.71.7A1 1 0 1 1 6.75 7.05l-.7-.71a1 1 0 0 1 0-1.41z"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg>
+        </button>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ PAGE HEADER ============ -->
+    <section class="page-header container">
+      <p class="eyebrow">About Me</p>
+      <h1>The developer<br />behind the <span class="accent">games</span>.</h1>
+    </section>
+
+    <!-- ============ INTRO: photo + summary, with the facts strip beneath ============ -->
+    <section class="section section-tight container">
+      <div class="about-intro">
+        <img class="about-photo reveal" id="aboutPhoto" src="../../assets/images/profile.jpg" alt="Siddharth Inamdar"
+             onerror="this.style.display='none'" />
+        <div class="about-summary" id="aboutSummary"></div>
+      </div>
+
+      <div class="side-card quick-facts reveal">
+        <h3>Quick Facts</h3>
+        <ul class="facts-list" id="quickFacts"></ul>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="section section-alt">
+      <div class="container">
+        <h2 class="section-title reveal">Experience</h2>
+        <div class="timeline" id="expTimeline"></div>
+      </div>
+    </section>
+
+    <!-- ============ EDUCATION ============ -->
+    <section class="section container">
+      <h2 class="section-title reveal">Education</h2>
+      <div class="edu-grid" id="eduList"></div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section section-alt">
+      <div class="container">
+        <h2 class="section-title reveal">Skills</h2>
+        <div class="skill-groups" id="skillGroups"></div>
+        <h3 class="strengths-title reveal">Strengths</h3>
+        <ul class="chips reveal" id="strengthChips"></ul>
+      </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="section container">
+      <div class="cta-band reveal">
+        <h2>Open to Unity roles.<br /><span class="accent">Let's talk.</span></h2>
+        <p class="muted" id="ctaOpenTo"></p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="../contact/index.html">Get in touch</a>
+          <a class="btn btn-outline" href="../../assets/resume/Siddharth_Inamdar_Resume.pdf" download>Download résumé</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> <span class="footer-name">Siddharth Inamdar</span></span>
+      <span class="muted" id="footerMeta"></span>
+    </div>
+  </footer>
+
+  <script src="../../data/profile.js"></script>
+  <script src="../../data/about.js"></script>
+  <script src="../../js/core.js"></script>
+  <script src="../../js/pages/about.js"></script>
+</body>
+</html>
