@@ -1,5 +1,5 @@
 /* ==========================================================================
-   CONTACT — contact sidebar links + the message form.
+   CONTACT - contact sidebar links + the message form.
    Used by the home page (contact section) and the contact page.
    Requires: data/profile.js, js/core.js
    ========================================================================== */
@@ -65,11 +65,11 @@
             }
           })
           .catch(function () {
-            status.textContent = "Something went wrong — please email me directly instead.";
+            status.textContent = "Something went wrong - please email me directly instead.";
           });
       } else {
         var subject = encodeURIComponent("Portfolio contact from " + data.get("name"));
-        var body = encodeURIComponent(data.get("message") + "\n\n— " + data.get("name") + " (" + data.get("email") + ")");
+        var body = encodeURIComponent(data.get("message") + "\n\n- " + data.get("name") + " (" + data.get("email") + ")");
         window.location.href = "mailto:" + PROFILE.email + "?subject=" + subject + "&body=" + body;
       }
     });

@@ -1,13 +1,13 @@
-# Siddharth Inamdar — Portfolio
+# Siddharth Inamdar - Portfolio
 
-Personal portfolio site. Plain HTML/CSS/JS — no build tools, no dependencies, nothing to break.
+Personal portfolio site. Plain HTML/CSS/JS - no build tools, no dependencies, nothing to break.
 
 **Live site:** https://YOUR_USERNAME.github.io/ *(update after deploying)*
 
 ## Folder structure
 
 ```
-index.html            Home — must stay at the root (GitHub Pages serves it as /)
+index.html            Home - must stay at the root (GitHub Pages serves it as /)
 pages/                Every other page, one folder each
   about/index.html      → /pages/about/
   projects/index.html   → /pages/projects/
@@ -16,15 +16,15 @@ pages/                Every other page, one folder each
 assets/               images, résumé, favicon, og-image
 css/style.css         All styling, both themes
 data/                 ← everything you edit lives here
-js/                   Rendering logic — you shouldn't need to touch it
+js/                   Rendering logic - you shouldn't need to touch it
 ```
 
 Every project gets its own shareable page automatically at `/pages/project/?id=<project-id>`
-(e.g. `/pages/project/?id=sweet-merge`) — great for pasting a direct link into a job
+(e.g. `/pages/project/?id=sweet-merge`) - great for pasting a direct link into a job
 application. Clicking any card, spotlight or showcase opens it. You don't create these pages;
 one template renders them all from `data/projects.js`.
 
-## Everything you edit lives in `data/` — never touch HTML/CSS/JS for content
+## Everything you edit lives in `data/` - never touch HTML/CSS/JS for content
 
 | File | What's in it |
 |---|---|
@@ -35,12 +35,12 @@ one template renders them all from `data/projects.js`.
 ## Add a new project (2 minutes)
 
 1. Open `data/projects.js`, copy the template from the comment at the top, paste it into the `PROJECTS` list and fill in what you have.
-   **Only `id`, `title`, `category` and `description` are required** — anything missing (store links, video, image) simply doesn't show.
+   **Only `id`, `title`, `category` and `description` are required** - anything missing (store links, video, image) simply doesn't show.
 2. Video: upload to YouTube (**unlisted** is fine), copy the ID from the URL (`youtube.com/watch?v=THIS_PART`) into `youtubeId`.
 3. Thumbnail (optional): drop a 16:9 image (e.g. 1280×720) into `assets/images/` and set the `thumbnail` path. Without one, a colored placeholder is generated.
-4. Want it in the big **Spotlight** section on the home page? Add `featured: true` (keep Spotlight to your 3–5 best).
+4. Want it in the big **Spotlight** section on the home page? Add `featured: true` (keep Spotlight to your 3-5 best).
    Want it in the **rotating hero banner** at the top of the home page? Add `showcase: true` (absolute best work, ideally with a video or image).
-5. Commit and push — GitHub Pages redeploys automatically.
+5. Commit and push - GitHub Pages redeploys automatically.
 
 > Paths in `data/*.js` are always written from the **root** (`assets/images/foo.png`),
 > never with `../`. The pages under `pages/` rebase them automatically.
@@ -74,7 +74,7 @@ only once a second page needs it.
 
 ## Run locally
 
-Open `index.html` in a browser — no server needed.
+Open `index.html` in a browser - no server needed.
 
 To preview the exact URLs GitHub Pages will serve (`/pages/about/` rather than
 `/pages/about/index.html`), run a local server instead:

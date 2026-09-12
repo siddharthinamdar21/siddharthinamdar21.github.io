@@ -1,5 +1,5 @@
 /* ==========================================================================
-   ABOUT CONTENT — edit anytime. Rendered on the Home page (stats, highlights)
+   ABOUT CONTENT - edit anytime. Rendered on the Home page (stats, highlights)
    and the About page (summary, experience, education, skills, strengths).
    ========================================================================== */
 
@@ -13,10 +13,10 @@ const ABOUT = {
   ],
 
   /* Recruiter-focused highlight cards (Home, under the hero) */
-  /* About page — summary paragraphs */
+  /* About page - summary paragraphs */
   summary: [
     "I'm a Unity developer with over two years of professional experience building and shipping mobile games and applications for production environments. My work spans casino, hyper-casual and casual games, as well as Unity-based meditation and wellness apps.",
-    "I primarily work independently, handling the complete development lifecycle — from implementing core gameplay systems and application logic to integrating live services, backend APIs and optimizing builds for mobile performance. I have hands-on experience with live games, integrating Firebase (Authentication, Cloud Save), Unity Gaming Services, Google Play Games Services and AWS-backed REST APIs.",
+    "I primarily work independently, handling the complete development lifecycle - from implementing core gameplay systems and application logic to integrating live services, backend APIs and optimizing builds for mobile performance. I have hands-on experience with live games, integrating Firebase (Authentication, Cloud Save), Unity Gaming Services, Google Play Games Services and AWS-backed REST APIs.",
     "My focus is on clean, modular architecture, performance-conscious development, and creating systems that stay scalable and maintainable under real production constraints. While I don't specialize in asset creation, I work closely with design inputs to integrate assets seamlessly into polished, functional experiences.",
   ],
 
@@ -25,12 +25,12 @@ const ABOUT = {
       role: "Unity Developer",
       company: "Zapplogics Solutions LLP",
       location: "Remote",
-      period: "Aug 2023 — Present",
+      period: "Aug 2023 - Present",
       points: [
         "Develop and maintain casino, hyper-casual and casual mobile games in production.",
         "Integrate live services: Firebase (Auth, Cloud Save), Unity Gaming Services, Google Play Games Services and AWS-backed REST APIs.",
         "Shipped Unity-based meditation & wellness applications end-to-end.",
-        "Own complete lifecycles independently — core gameplay, application logic, optimization and store builds.",
+        "Own complete lifecycles independently - core gameplay, application logic, optimization and store builds.",
       ],
     },
   ],
@@ -42,9 +42,9 @@ const ABOUT = {
       period: "Pursuing",
     },
     {
-      degree: "BCA — Game Development",
+      degree: "BCA - Game Development",
       school: "Tilak Maharashtra Vidyapeeth",
-      period: "2020 — 2023",
+      period: "2020 - 2023",
     },
   ],
 

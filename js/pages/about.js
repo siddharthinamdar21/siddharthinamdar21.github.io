@@ -1,5 +1,5 @@
 /* ==========================================================================
-   ABOUT PAGE (pages/about/index.html) — photo, summary, quick facts,
+   ABOUT PAGE (pages/about/index.html) - photo, summary, quick facts,
    experience timeline, education, skills and strengths.
    Requires: data/profile.js, data/about.js, js/core.js
    ========================================================================== */
@@ -52,7 +52,7 @@
   fact("phone", "Phone", PROFILE.phone, PROFILE.phone ? "tel:" + PROFILE.phone.replace(/\s/g, "") : null);
   fact("openTo", "Open to", PROFILE.openTo);
   /* Label is derived from the URL so it can never drift out of sync with
-     data/profile.js — the old hardcoded one no longer matched the real link. */
+     data/profile.js - the old hardcoded one no longer matched the real link. */
   var linkedinHandle = (PROFILE.socials.linkedin || "").replace(/\/+$/, "").split("/").pop();
   fact("linkedin", "LinkedIn", linkedinHandle, PROFILE.socials.linkedin);
 

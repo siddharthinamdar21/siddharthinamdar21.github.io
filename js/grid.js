@@ -1,5 +1,5 @@
 /* ==========================================================================
-   PROJECT GRID — category filters + project cards.
+   PROJECT GRID - category filters + project cards.
    Shared by the home page and the projects page, which ask for different
    things via attributes on #projectGrid:
 
@@ -51,7 +51,7 @@
         play.textContent = "Watch";
         thumb.appendChild(play);
       }
-      /* Grouped projects (six Plinko builds, five Slots) say so up front —
+      /* Grouped projects (six Plinko builds, five Slots) say so up front -
          the count is the interesting part, not the single poster frame. */
       if (p.videos && p.videos.length > 1) {
         var variants = document.createElement("span");
@@ -101,7 +101,7 @@
       used[p.category] = true;
     });
     var keys = Object.keys(CATEGORIES).filter(function (k) { return used[k]; });
-    /* One category needs no filter bar — and an empty bar would still take up
+    /* One category needs no filter bar - and an empty bar would still take up
        its margin, leaving a gap above the grid. */
     filterBar.hidden = keys.length < 2;
     if (filterBar.hidden) return;
@@ -123,7 +123,7 @@
 
   if (filterBar) buildFilters();
 
-  /* The scope tab lives on the page, not in this module — react to it. */
+  /* The scope tab lives on the page, not in this module - react to it. */
   if (useScope) {
     PF.scope.onChange(function () {
       activeFilter = "all";

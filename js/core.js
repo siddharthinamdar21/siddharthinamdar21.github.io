@@ -1,5 +1,5 @@
 /* ==========================================================================
-   CORE — loaded by every page, always first.
+   CORE - loaded by every page, always first.
    Owns the chrome that exists on all pages (theme toggle, nav, footer),
    the scroll-reveal system, the path helpers, and every helper used by
    more than one page module. Everything public hangs off window.PF.
@@ -280,7 +280,7 @@
   };
 
   /* Sweep once after every page module has rendered. Core loads first, so it
-     cannot sweep inline — the page modules haven't built their elements yet.
+     cannot sweep inline - the page modules haven't built their elements yet.
      Classic scripts at the end of <body> all run before DOMContentLoaded,
      so this fires exactly once, after the last of them. Modules that
      re-render later (the project grid's filters) call PF.watchReveals()

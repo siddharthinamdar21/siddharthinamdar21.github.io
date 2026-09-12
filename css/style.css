@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Siddharth Inamdar — Portfolio
+   Siddharth Inamdar - Portfolio
    Dual-theme design system. DARK (default) = deep navy + coral + neon green.
    LIGHT = warm cream alternate. All colors live in the variable blocks below.
    ========================================================================== */
@@ -11,10 +11,10 @@
   --ink: #f1f1f8;
   --muted: #a0a0c0;
   --line: #23234d;
-  --accent: #ff6b52;          /* coral — primary actions, highlights */
+  --accent: #ff6b52;          /* coral - primary actions, highlights */
   --accent-hover: #ff8a75;
   --accent-soft: rgba(255, 107, 82, 0.14);
-  --accent2: #b8f04d;         /* neon green — active states, eyebrow */
+  --accent2: #b8f04d;         /* neon green - active states, eyebrow */
   --accent2-soft: rgba(184, 240, 77, 0.12);
   --chip-bg: #1a1a44;
   --surface-band: rgba(14, 14, 51, 0.66);
@@ -111,7 +111,7 @@ img { max-width: 100%; display: block; }
   background-size: 340px;
   opacity: 0.4;
 }
-/* Tuned per theme by eye — the cream ground reads the linework differently. */
+/* Tuned per theme by eye - the cream ground reads the linework differently. */
 :root[data-theme="light"]::before { opacity: 0.32; }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -306,7 +306,7 @@ h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.2; }
 .hl-card h3 { font-size: 1rem; font-style: italic; text-transform: uppercase; margin-bottom: 8px; }
 .hl-card p { font-size: 0.9rem; color: var(--muted); }
 
-/* ============ Showcase — rotating hero banner (Home) ============ */
+/* ============ Showcase - rotating hero banner (Home) ============ */
 @keyframes slideIn { from { opacity: 0; transform: scale(1.015); } to { opacity: 1; transform: none; } }
 @keyframes kenburns { from { transform: scale(1); } to { transform: scale(1.07); } }
 
@@ -734,7 +734,7 @@ h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.2; }
   border-color: var(--accent);
 }
 .card-thumb { aspect-ratio: 16 / 9; overflow: hidden; position: relative; background: var(--chip-bg); }
-/* Smaller than the spotlight version — a card thumbnail is a third the size. */
+/* Smaller than the spotlight version - a card thumbnail is a third the size. */
 .card-thumb .play-badge { bottom: 10px; right: 10px; font-size: 0.66rem; padding: 5px 11px; gap: 5px; }
 .card-thumb .variant-badge {
   position: absolute; top: 10px; left: 10px;
@@ -755,7 +755,7 @@ h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.2; }
   position: relative;
   padding: 20px; display: flex; flex-direction: column; gap: 8px; flex: 1;
 }
-/* Same texture as the page, kept far fainter here — a card body is dense with
+/* Same texture as the page, kept far fainter here - a card body is dense with
    text, so this only has to hint that the card is part of the same surface. */
 .card-body::before {
   content: ""; position: absolute; inset: 0; pointer-events: none; z-index: 0;

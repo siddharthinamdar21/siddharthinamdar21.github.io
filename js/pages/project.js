@@ -140,7 +140,7 @@
         host.innerHTML = "";
         host.classList.remove("poster");
         host.style.background = "";
-        host.appendChild(ytFacade(v.id, p.title + " — " + label, host));
+        host.appendChild(ytFacade(v.id, p.title + " - " + label, host));
       });
       wrap.appendChild(btn);
     });
@@ -172,7 +172,7 @@
       if (s.src) {
         var img = document.createElement("img");
         img.src = PF.asset(s.src);
-        img.alt = p.title + (s.caption ? " — " + s.caption : "");
+        img.alt = p.title + (s.caption ? " - " + s.caption : "");
         img.loading = "lazy";
         img.onerror = function () { if (img.parentNode === frame) frame.replaceChild(PF.fallbackThumb(p), img); };
         frame.insertBefore(img, frame.firstChild);
@@ -218,9 +218,9 @@
       return;
     }
 
-    /* SEO / share metadata. og:image is made absolute — several link-preview
+    /* SEO / share metadata. og:image is made absolute - several link-preview
        scrapers (LinkedIn, WhatsApp) ignore relative image URLs. */
-    document.title = p.title + " — Siddharth Inamdar";
+    document.title = p.title + " - Siddharth Inamdar";
     var shortDesc = String(p.description).split(/\n\s*\n/)[0];
     var setMeta = function (elId, attr, val) {
       var el = document.getElementById(elId);
@@ -228,7 +228,7 @@
     };
     var absolute = function (path) { return new URL(path, window.location.href).href; };
     setMeta("metaDesc", "content", shortDesc);
-    setMeta("ogTitle", "content", p.title + " — Siddharth Inamdar");
+    setMeta("ogTitle", "content", p.title + " - Siddharth Inamdar");
     setMeta("ogDesc", "content", shortDesc);
     if (p.thumbnail) setMeta("ogImage", "content", absolute(PF.asset(p.thumbnail)));
     else if (PF.primaryVideo(p)) setMeta("ogImage", "content", PF.ytPoster(PF.primaryVideo(p)));
@@ -250,7 +250,7 @@
       descBox.appendChild(el);
     });
 
-    /* Optional cards — each stays hidden unless the project supplies data. */
+    /* Optional cards - each stays hidden unless the project supplies data. */
     /* role takes either a single sentence or a list of points. A list reads
        far better once a project has more than one thing worth naming. */
     if (p.role && (!Array.isArray(p.role) || p.role.length)) {

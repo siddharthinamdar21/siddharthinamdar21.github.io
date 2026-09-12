@@ -1,5 +1,5 @@
 /* ==========================================================================
-   HOME PAGE (index.html) — hero, highlights, showcase banner, spotlight
+   HOME PAGE (index.html) - hero, highlights, showcase banner, spotlight
    and the board game section.
    The project grid and contact form on this page come from js/grid.js and
    js/contact.js, which the projects and contact pages share.
@@ -381,7 +381,7 @@
         if (s.src) {
           var img = document.createElement("img");
           img.src = PF.asset(s.src);
-          img.alt = p.title + (s.caption ? " — " + s.caption : "");
+          img.alt = p.title + (s.caption ? " - " + s.caption : "");
           img.loading = "lazy";
           img.onerror = function () {
             if (img.parentNode === frame) frame.replaceChild(PF.fallbackThumb(p), img);

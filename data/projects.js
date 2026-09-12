@@ -1,13 +1,13 @@
 /* ==========================================================================
-   YOUR PROJECTS LIVE HERE — this is the only file to edit when adding one.
+   YOUR PROJECTS LIVE HERE - this is the only file to edit when adding one.
 
    HOW TO ADD A PROJECT (2 minutes):
    1. Copy the template below and paste it into the PROJECTS list (order on
       the site = order in this list).
    2. Fill in what you have. EVERYTHING except id, title, category and
-      description is OPTIONAL — missing fields simply don't appear.
+      description is OPTIONAL - missing fields simply don't appear.
       Add  featured: true  to show a project in the big "Spotlight" section
-      on the home page (best work first — keep it to 3-5 projects).
+      on the home page (best work first - keep it to 3-5 projects).
       Add  showcase: true  to put it in the rotating hero banner at the top
       of the home page (your absolute best, with a video or image):
         - no youtubeId  -> modal shows the image instead of a video
@@ -60,7 +60,7 @@ const PROJECTS = [
     featured: true,
     showcase: true,
     genre: "Match-3 Puzzle · Live on Google Play",
-    description: "A relaxing match-3 puzzle — swap gems through hundreds of handcrafted levels to piano music, fully playable offline. Published by EpicJoy Games and live on Google Play.\n\nThe game was already released when the client handed over the codebase, so the work here is extending and maintaining a live product rather than building one: roughly 300 levels, Google Play Games sign-in with conflict-resolved cloud saves, and offline quest and daily-reward systems built to the client’s explicit no-cloud requirement.\n\nThe difficulty system layers three tiers over the existing levels and unlocks them as the player advances — clear 100 levels and tier two opens across levels 1-100; clear 200 and that band moves to tier three while 100-200 opens at tier two, and so on, each band re-colouring as it unlocks. Finished stretches of the game become new content again instead of sitting idle.",
+    description: "A relaxing match-3 puzzle - swap gems through hundreds of handcrafted levels to piano music, fully playable offline. Published by EpicJoy Games and live on Google Play.\n\nThe game was already released when the client handed over the codebase, so the work here is extending and maintaining a live product rather than building one: roughly 300 levels, Google Play Games sign-in with conflict-resolved cloud saves, and offline quest and daily-reward systems built to the client’s explicit no-cloud requirement.\n\nThe difficulty system layers three tiers over the existing levels and unlocks them as the player advances - clear 100 levels and tier two opens across levels 1-100; clear 200 and that band moves to tier three while 100-200 opens at tier two, and so on, each band re-colouring as it unlocks. Finished stretches of the game become new content again instead of sitting idle.",
     role: [
       "Took over an already-live title from the client.",
       "Added roughly 300 levels.",
@@ -71,7 +71,7 @@ const PROJECTS = [
       "GPGS project setup, bug fixing and QA.",
     ],
     tech: ["Unity", "C#", "Google Play Games Services", "Unity Authentication", "Unity Cloud Save"],
-    youtubeId: "Gk5d8roF48g",
+    youtubeId: "6miTWs4TYxM",
     links: { playstore: "https://play.google.com/store/apps/details?id=com.gems.ofluna" },
   },
 
@@ -99,7 +99,7 @@ const PROJECTS = [
     category: "professional",
     featured: true,
     genre: "2D Platformer",
-    description: "A 2D platformer where you don’t control the animal — you control the cage it is trapped in. Move left and right, jump, and platform your way up to the key to free it. A range of animals can be unlocked.",
+    description: "A 2D platformer where you don’t control the animal - you control the cage it is trapped in. Move left and right, jump, and platform your way up to the key to free it. A range of animals can be unlocked.",
     role: [
       "Sole developer on the project.",
       "Cage movement and platforming physics.",
@@ -131,7 +131,7 @@ const PROJECTS = [
     title: "Drag Racing",
     category: "professional",
     genre: "Arcade Racing",
-    description: "A 2D drag racer built entirely on shift timing. Nitro pickups spawn along the road and supply the acceleration needed to reach the next gear change — though once you hit top speed they stop helping.",
+    description: "A 2D drag racer built entirely on shift timing. Nitro pickups spawn along the road and supply the acceleration needed to reach the next gear change - though once you hit top speed they stop helping.",
     role: [
       "Sole developer on the project.",
       "Gear-shift timing and acceleration curves.",
@@ -182,11 +182,11 @@ const PROJECTS = [
     category: "professional",
     showcase: true,
     genre: "Voice-Controlled Arcade",
-    description: "A 2D game controlled by your voice. The frog hops from lily pad to lily pad for as long as you keep making sound — go quiet mid-jump and it drops into the water. Sinking and breaking pads, crocodiles surfacing on a timer, a fish patrolling the gaps and alternating spikes all stand between the frog and dry land. Ships with handcrafted levels alongside an endless mode.",
+    description: "A 2D game controlled by your voice. The frog hops from lily pad to lily pad for as long as you keep making sound - go quiet mid-jump and it drops into the water. Sinking and breaking pads, crocodiles surfacing on a timer, a fish patrolling the gaps and alternating spikes all stand between the frog and dry land. Ships with handcrafted levels alongside an endless mode.",
     role: [
       "Sole developer on the project.",
       "Microphone input driving the frog’s jump.",
-      "Obstacle systems — sinking and breaking pads, timed crocodiles, a patrolling fish and alternating spikes.",
+      "Obstacle systems - sinking and breaking pads, timed crocodiles, a patrolling fish and alternating spikes.",
       "Handcrafted level flow alongside an endless mode.",
     ],
     tech: ["Unity", "C#"],
@@ -198,7 +198,7 @@ const PROJECTS = [
     title: "Light Drop",
     category: "professional",
     genre: "Physics Puzzle",
-    description: "A physics puzzle where you rotate the board rather than the ball. The ball hangs from a wire and always falls straight down — gravity ignores the board’s angle — so turning the arena swings it, while the controls on the right pay the wire out or reel it back in. Connect the ball to the plug to light the bulb, dodging saw blades on the way, inside a capped length of wire and a level timer. Every level is handcrafted.",
+    description: "A physics puzzle where you rotate the board rather than the ball. The ball hangs from a wire and always falls straight down - gravity ignores the board’s angle - so turning the arena swings it, while the controls on the right pay the wire out or reel it back in. Connect the ball to the plug to light the bulb, dodging saw blades on the way, inside a capped length of wire and a level timer. Every level is handcrafted.",
     role: [
       "Sole developer on the project.",
       "Board rotation and suspended-wire physics.",
@@ -214,7 +214,7 @@ const PROJECTS = [
     title: "Ball Escape",
     category: "professional",
     genre: "One-Tap Timing",
-    description: "A timing game played on a rotating ring. The ball circles the track and so does the obstacle, and a single tap flips the ball’s direction — the whole game is reading the closing gap and reversing at the right moment. Speed and shield power-ups carry runs further.",
+    description: "A timing game played on a rotating ring. The ball circles the track and so does the obstacle, and a single tap flips the ball’s direction - the whole game is reading the closing gap and reversing at the right moment. Speed and shield power-ups carry runs further.",
     role: [
       "Sole developer on the project.",
       "Rotation and collision timing.",
@@ -279,12 +279,12 @@ const PROJECTS = [
     title: "Pillars Of Four",
     category: "professional",
     genre: "Turn-Based Strategy · Dots & Boxes",
-    description: "Dots and Boxes with a dice twist. Players join adjacent dots with lines, and closing the fourth side of a square claims it; whoever holds the most squares once the board runs out wins.\n\nThe roll is what changes it — each turn the dice decides how many lines you get to draw, and certain highlighted connections only open on a six, so position and luck trade off against each other.\n\nShips with a PvE opponent and pass-and-play PvP for two to four players on a single device.",
+    description: "Dots and Boxes with a dice twist. Players join adjacent dots with lines, and closing the fourth side of a square claims it; whoever holds the most squares once the board runs out wins.\n\nThe roll is what changes it - each turn the dice decides how many lines you get to draw, and certain highlighted connections only open on a six, so position and luck trade off against each other.\n\nShips with a PvE opponent and pass-and-play PvP for two to four players on a single device.",
     role: [
       "Sole developer on the project.",
       "Line drawing and square-claim logic across the dot grid.",
       "Dice-driven turn system, including the six-only connections.",
-      "PvE opponent and 2–4 player pass-and-play PvP.",
+      "PvE opponent and 2-4 player pass-and-play PvP.",
       "Scoring and end-of-game resolution.",
     ],
     tech: ["Unity", "C#"],
@@ -297,7 +297,7 @@ const PROJECTS = [
     category: "professional",
     showcase: true,
     genre: "Endless Defence · Merge",
-    description: "An endless wave defender played on a plinko board. Enemies fall through a pin grid, and anything still alive at the bottom is piped back to the top — pressure accumulates across waves instead of resetting.\n\nCurrency earned from kills buys heroes dropped onto the pins: fire mage, ice mage, tank or knight, drawn at random, each with its own health and strengths. Matching heroes merge into higher tiers with upgraded stats, up to four levels deep.\n\nEnemies chip away at whatever hero they reach until it dies. A support hero at the base is permanent, but if the grid itself is empty at the end of a wave, the run is over — so the whole game is spending kills fast enough to keep the board populated.",
+    description: "An endless wave defender played on a plinko board. Enemies fall through a pin grid, and anything still alive at the bottom is piped back to the top - pressure accumulates across waves instead of resetting.\n\nCurrency earned from kills buys heroes dropped onto the pins: fire mage, ice mage, tank or knight, drawn at random, each with its own health and strengths. Matching heroes merge into higher tiers with upgraded stats, up to four levels deep.\n\nEnemies chip away at whatever hero they reach until it dies. A support hero at the base is permanent, but if the grid itself is empty at the end of a wave, the run is over - so the whole game is spending kills fast enough to keep the board populated.",
     role: [
       "Sole developer on the project.",
       "Pin-grid enemy pathing and the wrap-around wave pipe.",
@@ -314,7 +314,7 @@ const PROJECTS = [
     title: "Triple Tile",
     category: "professional",
     genre: "Tile Match Puzzle",
-    description: "A tile-matching puzzle — clear the board by collecting three identical tiles at a time.",
+    description: "A tile-matching puzzle - clear the board by collecting three identical tiles at a time.",
     role: [
       "Sole developer on the project.",
       "Tile matching and board clearing logic.",
@@ -346,7 +346,7 @@ const PROJECTS = [
     title: "Sliding Puzzle",
     category: "professional",
     genre: "Sliding Tile Puzzle",
-    description: "A classic sliding tile puzzle — shuffle pieces through the single empty slot to restore the picture.",
+    description: "A classic sliding tile puzzle - shuffle pieces through the single empty slot to restore the picture.",
     role: [
       "Sole developer on the project.",
       "Slide mechanics and solvability handling.",
@@ -385,7 +385,7 @@ const PROJECTS = [
     featured: true,
     showcase: true,
     genre: "Craft Tools · Reference",
-    description: "A knitting companion built around gauge — the gap between the stitches a pattern assumes and the stitches your hands actually produce, which is what turns forty hours of work into a sweater that does not fit. Published on the App Store as N.V Official App.",
+    description: "A knitting companion built around gauge - the gap between the stitches a pattern assumes and the stitches your hands actually produce, which is what turns forty hours of work into a sweater that does not fit. Published on the App Store as N.V Official App.",
     role: [
       "Sole developer on the project.",
       "Gauge calculation and pattern conversion.",
@@ -402,7 +402,7 @@ const PROJECTS = [
     title: "Trackplan",
     category: "apps",
     genre: "Model Railway · Utility",
-    description: "An offline iPhone companion for DCC model railway enthusiasts. It keeps a locomotive fleet and its DCC addresses in one place, and checks whether a given train can actually handle the curve radii of a planned layout before it is built.\n\nDecoder settings and programming history live alongside each locomotive, so the configuration that took an afternoon to get right is still there months later. Everything works without a connection — the layout room is rarely where the signal is.",
+    description: "An offline iPhone companion for DCC model railway enthusiasts. It keeps a locomotive fleet and its DCC addresses in one place, and checks whether a given train can actually handle the curve radii of a planned layout before it is built.\n\nDecoder settings and programming history live alongside each locomotive, so the configuration that took an afternoon to get right is still there months later. Everything works without a connection - the layout room is rarely where the signal is.",
     role: [
       "Sole developer on the project.",
       "Locomotive fleet and DCC address management.",
@@ -440,7 +440,7 @@ const PROJECTS = [
     featured: true,
     showcase: true,
     genre: "Sports Training",
-    description: "A training companion for volleyball — drill sessions delivered through an in-app video player, with quizzes, daily streaks and progress tracked across them.",
+    description: "A training companion for volleyball - drill sessions delivered through an in-app video player, with quizzes, daily streaks and progress tracked across them.",
     role: [
       "Sole developer on the project.",
       "Training sessions with an in-app video player.",
@@ -457,7 +457,7 @@ const PROJECTS = [
     category: "apps",
     featured: true,
     genre: "Wellness · Meditation",
-    description: "Meditation sessions tailored to individual sports — basketball, football, cricket and tennis each getting their own guided content.",
+    description: "Meditation sessions tailored to individual sports - basketball, football, cricket and tennis each getting their own guided content.",
     role: [
       "Sole developer on the project.",
       "Per-sport content structure and navigation.",
@@ -527,9 +527,9 @@ const PROJECTS = [
     title: "Word EZ",
     category: "academic",
     genre: "Multiplayer Word Game",
-    description: "A 2D multiplayer word game for Android and iOS. Each round hands both teams a clue — Kitchen, City, School — and players race to submit as many related words as they can inside a two-minute timer. Correct answers score, repeats are rejected, and four rounds decide the match.\n\nAnswering quickly matters more than answering often. Every correct word opens a combo window, and the multiplier keeps climbing as long as the next word lands in time; stall, and the accumulated combo banks into the score and resets. Vocabulary gets you on the board, pace is what wins.\n\nTwo modes change the shape of that. Normal alternates Red and Blue on the same clue, so the second team has to find whatever the first missed. Fast-Paced has both teams answering at once. Rooms hold up to four players over Photon Unity Networking.",
+    description: "A 2D multiplayer word game for Android and iOS. Each round hands both teams a clue - Kitchen, City, School - and players race to submit as many related words as they can inside a two-minute timer. Correct answers score, repeats are rejected, and four rounds decide the match.\n\nAnswering quickly matters more than answering often. Every correct word opens a combo window, and the multiplier keeps climbing as long as the next word lands in time; stall, and the accumulated combo banks into the score and resets. Vocabulary gets you on the board, pace is what wins.\n\nTwo modes change the shape of that. Normal alternates Red and Blue on the same clue, so the second team has to find whatever the first missed. Fast-Paced has both teams answering at once. Rooms hold up to four players over Photon Unity Networking.",
     role: [
-      "Sole developer — built as a BCA final-year project.",
+      "Sole developer - built as a BCA final-year project.",
       "Photon Unity Networking: rooms, synchronised player state and RPC traffic.",
       "Clue and word-list validation, rejecting repeats and non-matching answers.",
       "Combo timing, multiplier scoring and team totals.",
@@ -544,7 +544,7 @@ const PROJECTS = [
     category: "academic",
     genre: "Action-RPG · Survival",
     description: "A sci-fi survival action-RPG: stranded on an alien planet, you must gather what you need and escape before your pursuers arrive. Work in progress.",
-    role: "Solo developer — exploration systems, survival mechanics and enemy pursuit logic.",
+    role: "Solo developer - exploration systems, survival mechanics and enemy pursuit logic.",
     tech: ["Unity", "C#"],
     youtubeId: "47f3ppg84-0",
   },
@@ -553,8 +553,8 @@ const PROJECTS = [
     title: "Fruit Catch",
     category: "academic",
     genre: "Hyper-Casual",
-    description: "A hyper-casual reflex game — catch falling fruits with slider controls and share your high score with friends. In development.",
-    role: "Solo developer — slider input, spawn balancing and score-sharing functionality.",
+    description: "A hyper-casual reflex game - catch falling fruits with slider controls and share your high score with friends. In development.",
+    role: "Solo developer - slider input, spawn balancing and score-sharing functionality.",
     tech: ["Unity", "C#"],
     youtubeId: "BpevSGG4g1g",
   },
@@ -563,8 +563,8 @@ const PROJECTS = [
     title: "Angry Birds Recreation",
     category: "academic",
     genre: "2D Physics Puzzle",
-    description: "A recreation of the classic slingshot physics gameplay — trajectory aiming, destructible structures and satisfying chain reactions, built as a learning prototype.",
-    role: "Solo developer — slingshot physics, projectile trajectory and destruction logic.",
+    description: "A recreation of the classic slingshot physics gameplay - trajectory aiming, destructible structures and satisfying chain reactions, built as a learning prototype.",
+    role: "Solo developer - slingshot physics, projectile trajectory and destruction logic.",
     tech: ["Unity", "C#"],
     youtubeId: "O98EYRDUlEI",
   },
@@ -573,8 +573,8 @@ const PROJECTS = [
     title: "FPS Shooting Prototype",
     category: "academic",
     genre: "First-Person Shooter",
-    description: "A first-person shooting prototype — raycast weapons, target destruction and responsive camera controls, built to explore core FPS feel.",
-    role: "Solo developer — weapon systems, raycast hit detection and camera handling.",
+    description: "A first-person shooting prototype - raycast weapons, target destruction and responsive camera controls, built to explore core FPS feel.",
+    role: "Solo developer - weapon systems, raycast hit detection and camera handling.",
     tech: ["Unity", "C#"],
     youtubeId: "rg0W3fyrmXg",
   },
@@ -583,8 +583,8 @@ const PROJECTS = [
     title: "Wall Breaker",
     category: "academic",
     genre: "Arcade · Brick Breaker",
-    description: "A brick-breaker arcade prototype — paddle control, ball physics, brick layouts and power-up hooks.",
-    role: "Solo developer — ball physics, collision handling and level layouts.",
+    description: "A brick-breaker arcade prototype - paddle control, ball physics, brick layouts and power-up hooks.",
+    role: "Solo developer - ball physics, collision handling and level layouts.",
     tech: ["Unity", "C#"],
     youtubeId: "wrKIEZGlRMc",
   },
@@ -593,8 +593,8 @@ const PROJECTS = [
     title: "Platformer Game",
     category: "academic",
     genre: "2D Platformer",
-    description: "A 2D platformer prototype with a full character controller — running, jumping, hazards and a menu flow with instructions.",
-    role: "Solo developer — character controller, level design and game flow.",
+    description: "A 2D platformer prototype with a full character controller - running, jumping, hazards and a menu flow with instructions.",
+    role: "Solo developer - character controller, level design and game flow.",
     tech: ["Construct 2"],
     youtubeId: "d7FQ6q8zqoA",
   },
@@ -603,8 +603,8 @@ const PROJECTS = [
     title: "Snake Game",
     category: "academic",
     genre: "Arcade Classic",
-    description: "The classic snake, rebuilt in Unity — grid-based movement, growth mechanics and scoring.",
-    role: "Solo developer — grid movement system and game loop.",
+    description: "The classic snake, rebuilt in Unity - grid-based movement, growth mechanics and scoring.",
+    role: "Solo developer - grid movement system and game loop.",
     tech: ["Unity", "C#"],
     youtubeId: "309AFuXXCCo",
   },
@@ -613,8 +613,8 @@ const PROJECTS = [
     title: "Candy Crush Recreation",
     category: "academic",
     genre: "Match-3 Puzzle",
-    description: "A match-3 prototype recreating Candy Crush-style gameplay — grid matching, swaps and cascade resolution.",
-    role: "Solo developer — match detection, swap logic and cascading refills.",
+    description: "A match-3 prototype recreating Candy Crush-style gameplay - grid matching, swaps and cascade resolution.",
+    role: "Solo developer - match detection, swap logic and cascading refills.",
     tech: ["Unity", "C#"],
     youtubeId: "EfKOfvyojNU",
   },
@@ -625,8 +625,8 @@ const PROJECTS = [
     title: "Space Shooter",
     category: "academic",
     genre: "2D Arcade Shooter",
-    description: "A 2D plane shooter — fly, dodge incoming fire and clear waves of enemies. Built in Construct 2 using its visual event system rather than written code.",
-    role: "Solo developer — enemy waves, shooting and collision logic built with Construct 2 event sheets.",
+    description: "A 2D plane shooter - fly, dodge incoming fire and clear waves of enemies. Built in Construct 2 using its visual event system rather than written code.",
+    role: "Solo developer - enemy waves, shooting and collision logic built with Construct 2 event sheets.",
     tech: ["Construct 2"],
     youtubeId: "Q2YIJ_SYroQ",
   },
@@ -636,8 +636,8 @@ const PROJECTS = [
     title: "Car Movement",
     category: "academic",
     genre: "Vehicle Physics",
-    description: "A driving prototype built by working through Unity’s own vehicle setup documentation — wheel colliders, suspension and steering behaviour.",
-    role: "Solo developer — configured the wheel colliders and drive/steering setup from Unity’s vehicle manual.",
+    description: "A driving prototype built by working through Unity’s own vehicle setup documentation - wheel colliders, suspension and steering behaviour.",
+    role: "Solo developer - configured the wheel colliders and drive/steering setup from Unity’s vehicle manual.",
     tech: ["Unity", "C#"],
     youtubeId: "Ob4C2kxogIo",
   },
@@ -647,7 +647,7 @@ const PROJECTS = [
     title: "AR QR Detector",
     category: "academic",
     genre: "Augmented Reality",
-    description: "A marker-based AR experiment — the camera detects a QR marker and anchors an interactive 3D overlay to it, keeping the overlay tracked as the marker moves.",
+    description: "A marker-based AR experiment - the camera detects a QR marker and anchors an interactive 3D overlay to it, keeping the overlay tracked as the marker moves.",
     role: "Built the marker detection and AR overlay interaction in Unity.",
     tech: ["Unity", "AR Core", "Vuforia"],
     youtubeId: "6UU3Qr2jNsI",
@@ -682,7 +682,7 @@ const PROJECTS = [
     featured: true,
     showcase: true,
     genre: "Casino · Drop Game",
-    description: "Plinko built across six variants — a ball dropped through a peg field into weighted prize slots, with multipliers and risk settings deciding the payout.",
+    description: "Plinko built across six variants - a ball dropped through a peg field into weighted prize slots, with multipliers and risk settings deciding the payout.",
     role: [
       "Sole developer on all six variants.",
       "Peg field and drop physics.",
@@ -706,7 +706,7 @@ const PROJECTS = [
     category: "casino",
     showcase: true,
     genre: "Casino · Slot Machine",
-    description: "Slot machines built across five variants — reel spin logic, paylines, symbol weighting and win resolution.",
+    description: "Slot machines built across five variants - reel spin logic, paylines, symbol weighting and win resolution.",
     role: [
       "Sole developer on all five variants.",
       "Reel spin and stop logic.",
@@ -728,10 +728,10 @@ const PROJECTS = [
     title: "Blackjack",
     category: "casino",
     genre: "Casino · Card Game",
-    description: "Blackjack built across three variants — betting, hit, stand, double and split handling with dealer rules and payout resolution.",
+    description: "Blackjack built across three variants - betting, hit, stand, double and split handling with dealer rules and payout resolution.",
     role: [
       "Sole developer on all three variants.",
-      "Hand logic — hit, stand, double, split.",
+      "Hand logic - hit, stand, double, split.",
       "Dealer rules and bust handling.",
       "Betting and payout resolution.",
     ],
@@ -748,7 +748,7 @@ const PROJECTS = [
     title: "Lucky Wheel",
     category: "casino",
     genre: "Casino · Prize Wheel",
-    description: "A prize wheel built across two variants — weighted segment selection, spin physics and reward payout.",
+    description: "A prize wheel built across two variants - weighted segment selection, spin physics and reward payout.",
     role: [
       "Sole developer on both variants.",
       "Spin physics and easing to a weighted result.",
@@ -767,7 +767,7 @@ const PROJECTS = [
     category: "casino",
     featured: true,
     genre: "Casino · Card Game",
-    description: "Video poker built across two variants — deal, hold and draw, with payouts resolved against a hand-ranking table.",
+    description: "Video poker built across two variants - deal, hold and draw, with payouts resolved against a hand-ranking table.",
     role: [
       "Sole developer on both variants.",
       "Deal, hold and draw flow.",
@@ -785,7 +785,7 @@ const PROJECTS = [
     title: "Baccarat",
     category: "casino",
     genre: "Casino · Card Game",
-    description: "A Baccarat table for mobile — player and banker betting, card draw rules and payout resolution.",
+    description: "A Baccarat table for mobile - player and banker betting, card draw rules and payout resolution.",
     role: [
       "Sole developer on the project.",
       "Draw rules and hand resolution.",
@@ -800,7 +800,7 @@ const PROJECTS = [
     title: "Bingo",
     category: "casino",
     genre: "Casino · Number Game",
-    description: "A mobile Bingo game — card marking, pattern detection and payout on completed lines.",
+    description: "A mobile Bingo game - card marking, pattern detection and payout on completed lines.",
     role: [
       "Sole developer on the project.",
       "Number draw and card marking.",
@@ -816,7 +816,7 @@ const PROJECTS = [
     category: "casino",
     featured: true,
     genre: "Casino · Number Game",
-    description: "A Keno game — pick your numbers, run the draw and resolve payouts against how many hit.",
+    description: "A Keno game - pick your numbers, run the draw and resolve payouts against how many hit.",
     role: [
       "Sole developer on the project.",
       "Number selection and draw.",
@@ -831,7 +831,7 @@ const PROJECTS = [
     title: "Scratch Card",
     category: "casino",
     genre: "Casino · Instant Win",
-    description: "A scratch card game — reveal panels by scratching and resolve the prize underneath.",
+    description: "A scratch card game - reveal panels by scratching and resolve the prize underneath.",
     role: [
       "Sole developer on the project.",
       "Scratch reveal interaction and masking.",
@@ -847,7 +847,7 @@ const PROJECTS = [
     category: "casino",
     showcase: true,
     genre: "Casino · Card Game",
-    description: "Teen Patti for mobile — hand ranking, betting rounds and showdown resolution.",
+    description: "Teen Patti for mobile - hand ranking, betting rounds and showdown resolution.",
     role: [
       "Sole developer on the project.",
       "Hand ranking and comparison.",
@@ -862,7 +862,7 @@ const PROJECTS = [
     title: "Roulette",
     category: "casino",
     genre: "Casino · Table Game",
-    description: "A Roulette table — inside and outside bets, wheel spin and payout resolution.",
+    description: "A Roulette table - inside and outside bets, wheel spin and payout resolution.",
     role: [
       "Sole developer on the project.",
       "Wheel spin and result landing.",
@@ -877,7 +877,7 @@ const PROJECTS = [
     title: "Bicho Bash",
     category: "casino",
     genre: "Casino · Lottery",
-    description: "An animal-themed lottery game — choose your animals, run the draw and pay out on matches.",
+    description: "An animal-themed lottery game - choose your animals, run the draw and pay out on matches.",
     role: [
       "Sole developer on the project.",
       "Selection and draw logic.",
@@ -893,8 +893,8 @@ const PROJECTS = [
     title: "Rise of Heroes",
     category: "boardgame",
     genre: "Physical Board Game · Co-op Wave Defense",
-    description: "Two ancient Demon Lords have been reincarnated to take revenge against The Four Kingdoms, who once defeated and sealed them away. The kingdoms performed a ritual and summoned four heroes from differing worlds to conquer the demon lords and save their land.\n\nYou are one of those heroes — summoned to a kingdom with a weapon fate has gifted you. Each weapon has its own pros and cons against different monsters. Fight through waves, defeat each wave's boss, and lift the curse from the kingdoms.\n\nDesigned and built academically as a complete physical game: board, hero/boss/minion cards, dice and full rules. The board was composed in Photoshop over Carcassonne's tile artwork and the creature cards use existing fantasy art — the systems, card layouts, balancing and rules are my own.",
-    role: "Game designer — core loop, wave and weapon balancing, card layouts and board composition in Photoshop, playtesting and complete design documentation.",
+    description: "Two ancient Demon Lords have been reincarnated to take revenge against The Four Kingdoms, who once defeated and sealed them away. The kingdoms performed a ritual and summoned four heroes from differing worlds to conquer the demon lords and save their land.\n\nYou are one of those heroes - summoned to a kingdom with a weapon fate has gifted you. Each weapon has its own pros and cons against different monsters. Fight through waves, defeat each wave's boss, and lift the curse from the kingdoms.\n\nDesigned and built academically as a complete physical game: board, hero/boss/minion cards, dice and full rules. The board was composed in Photoshop over Carcassonne's tile artwork and the creature cards use existing fantasy art - the systems, card layouts, balancing and rules are my own.",
+    role: "Game designer - core loop, wave and weapon balancing, card layouts and board composition in Photoshop, playtesting and complete design documentation.",
     tech: ["Game Design", "Balancing", "Playtesting"],
     thumbnail: "assets/images/rise-of-heroes/thumb.jpg",
     /* Photos for the board game gallery on the home page (side-arrow carousel).
@@ -906,7 +906,7 @@ const PROJECTS = [
       { src: "assets/images/rise-of-heroes/physical-2.jpg", caption: "Perks sheet with quest and monster cards" },
       { src: "assets/images/rise-of-heroes/board.jpg",         caption: "The board" },
       { src: "assets/images/rise-of-heroes/boss-cards.jpg",    caption: "Boss cards" },
-      { src: "assets/images/rise-of-heroes/monster-cards.jpg", caption: "Monster cards — buffs and nerfs per weapon" },
+      { src: "assets/images/rise-of-heroes/monster-cards.jpg", caption: "Monster cards - buffs and nerfs per weapon" },
       { src: "assets/images/rise-of-heroes/quest-cards.jpg",   caption: "Quest cards" },
       { src: "assets/images/rise-of-heroes/perk-chart.jpg",    caption: "Perk chart" },
       { src: "assets/images/rise-of-heroes/cards-info.jpg",    caption: "Card reference sheet" },
