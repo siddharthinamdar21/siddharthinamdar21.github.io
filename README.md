@@ -2,7 +2,7 @@
 
 Personal portfolio site. Plain HTML/CSS/JS - no build tools, no dependencies, nothing to break.
 
-**Live site:** https://YOUR_USERNAME.github.io/ *(update after deploying)*
+**Live site:** <https://siddharthinamdar21.github.io>
 
 ## Folder structure
 
@@ -29,7 +29,8 @@ one template renders them all from `data/projects.js`.
 | File | What's in it |
 |---|---|
 | [`data/profile.js`](data/profile.js) | Personal details used everywhere: name, title, tagline, email, phone, location, "open to", socials, résumé path, Formspree ID |
-| [`data/about.js`](data/about.js) | Hero stats, recruiter highlight cards, about summary, experience (with bullet points), education, skills, strengths |
+| [`data/about.js`](data/about.js) | Hero stats, about summary, experience (with bullet points), education, skills, strengths |
+| [`data/home.js`](data/home.js) | Home page tab content: heading, intro line and highlight cards for each of the three tabs |
 | [`data/projects.js`](data/projects.js) | All projects + category names |
 
 ## Add a new project (2 minutes)
