@@ -153,3 +153,10 @@ anchor instead of a click handler. It is `aria-hidden` with `tabindex="-1"`,
 because each area already holds a labelled button to the same project.
 **Why:** A click handler gives no middle click, no open in new tab, no hover
 URL and no keyboard route. `PF.goToProject` went with its last caller.
+
+### D22 - The company titles stat counts company games and apps only
+**What:** `ABOUT.stats` reads 25+: the 17 company games plus the 8 company apps.
+Casino entries and Gems of Luna are both excluded. Total projects reads 55.
+**Why:** The casino cards are selected previews from several client casino apps
+rather than a title list, and Gems of Luna was inherited live (D10). The old 12
+matched nothing in the data, and undercounting is what survives an interview.

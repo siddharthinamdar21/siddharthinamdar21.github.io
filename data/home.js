@@ -51,8 +51,8 @@ const HOME = {
     highlights: [
       {
         icon: "🎰",
-        title: "Twelve casino titles",
-        text: "Table games, slots, instant-win and lottery formats, each built end to end and released in production.",
+        title: "Casino formats in production",
+        text: "Table games, slots, instant-win and lottery formats built end to end across client casino apps. These cards are previews of the builds that show best, not the full catalogue.",
       },
       {
         icon: "🎲",

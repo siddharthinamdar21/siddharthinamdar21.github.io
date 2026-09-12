@@ -8,14 +8,14 @@ const ABOUT = {
   /* Hero stat chips (Home). "value" animates counting up if it starts with a number. */
   stats: [
     { value: "3+",  label: "years professional experience" },
-    { value: "12",  label: "company titles built solo" },
-    { value: "30+", label: "projects & prototypes" },
+    { value: "25+", label: "company titles built solo" },
+    { value: "55",  label: "projects & prototypes" },
   ],
 
   /* Recruiter-focused highlight cards (Home, under the hero) */
   /* About page - summary paragraphs */
   summary: [
-    "I'm a Unity developer with over two years of professional experience building and shipping mobile games and applications for production environments. My work spans casino, hyper-casual and casual games, as well as Unity-based meditation and wellness apps.",
+    "I'm a Unity developer with over three years of professional experience building and shipping mobile games and applications for production environments. My work spans casino, hyper-casual and casual games, as well as Unity-based meditation and wellness apps.",
     "I primarily work independently, handling the complete development lifecycle - from implementing core gameplay systems and application logic to integrating live services, backend APIs and optimizing builds for mobile performance. I have hands-on experience with live games, integrating Firebase (Authentication, Cloud Save), Unity Gaming Services, Google Play Games Services and AWS-backed REST APIs.",
     "My focus is on clean, modular architecture, performance-conscious development, and creating systems that stay scalable and maintainable under real production constraints. While I don't specialize in asset creation, I work closely with design inputs to integrate assets seamlessly into polished, functional experiences.",
   ],

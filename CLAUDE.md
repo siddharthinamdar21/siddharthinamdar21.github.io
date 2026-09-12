@@ -113,6 +113,9 @@ Content lives entirely in `data/`. Do not put copy in HTML or JS.
 - **`role` accepts a string or an array.** Arrays render as a bulleted list.
   Both shapes are in use; check before assuming.
 - **Project `id`s are URLs.** Renaming one breaks any link already shared.
+- **`ABOUT.stats` hardcodes counts.** Re-verify them against `data/projects.js`
+  whenever projects are added. Both `12 company titles` and `30+ projects` went
+  stale unnoticed; D22 records what the titles figure counts.
 - **No em dashes or en dashes anywhere** - copy, comments, markup. Owner's
   preference, applied across the whole repo.
 - **Write literal characters in CSS `content:`, not escapes.** A `\25b8` escape
