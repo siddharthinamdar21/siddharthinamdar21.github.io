@@ -19,10 +19,14 @@
 
   (function retargetBack() {
     var back = projectRoot.querySelector(".pd-back");
-    if (!back || !document.referrer) return;
+    if (!back) return;
+
+    /* Recorded on the way out, so it survives a missing referrer. */
+    var source = PF.cameFrom() || document.referrer;
+    if (!source) return;
 
     var from;
-    try { from = new URL(document.referrer, window.location.href); } catch (e) { return; }
+    try { from = new URL(source, window.location.href); } catch (e) { return; }
     if (from.origin !== window.location.origin) return;        /* arrived from elsewhere */
     if (/\/pages\/project\//.test(from.pathname)) return;      /* another detail page */
 
@@ -33,9 +37,12 @@
       "Back to home";
 
     back.textContent = "← " + label;
-    back.href = document.referrer;   /* real href, so middle-click still works */
+    back.href = from.href;   /* real href, so middle-click still works */
     back.addEventListener("click", function (e) {
-      if (window.history.length > 1) {
+      /* History restores the scroll position in the grid they left, but only
+         if that page really is the previous entry. Without a referrer we
+         cannot know that, so let the link navigate normally instead. */
+      if (document.referrer === from.href && window.history.length > 1) {
         e.preventDefault();
         window.history.back();
       }

@@ -9,6 +9,21 @@
 (function () {
   "use strict";
 
+  /* A real link laid over a clickable area. The showcase slide and the board
+     game frame used to navigate from a click handler, which meant middle
+     click, open in new tab, right click and the hover URL all did nothing.
+     Both areas already hold a labelled button to the same project, so this
+     link stays out of the tab order and out of the accessibility tree: it
+     exists only to give the mouse the affordances a real link has. */
+  function coverLink(p) {
+    var a = document.createElement("a");
+    a.className = "cover-link";
+    a.href = PF.projectUrl(p);
+    a.setAttribute("aria-hidden", "true");
+    a.setAttribute("tabindex", "-1");
+    return a;
+  }
+
   /* ---------------- Hero ---------------- */
 
   var heroTagline = document.getElementById("heroTagline");
@@ -170,6 +185,7 @@
         var scrim = document.createElement("div");
         scrim.className = "show-scrim";
         slide.appendChild(scrim);
+        slide.appendChild(coverLink(p));
 
         var info = document.createElement("div");
         info.className = "show-info";
@@ -194,7 +210,6 @@
         details.className = "btn btn-primary btn-sm";
         details.href = PF.projectUrl(p);
         details.textContent = PF.primaryVideo(p) ? "▶ Watch & details" : "View details";
-        details.addEventListener("click", function (e) { e.stopPropagation(); });
         actions.appendChild(details);
         Object.keys(p.links || {}).slice(0, 1).forEach(function (key) {
           var a = document.createElement("a");
@@ -203,13 +218,11 @@
           a.target = "_blank";
           a.rel = "noopener";
           a.textContent = PF.LINK_LABELS[key] || key;
-          a.addEventListener("click", function (e) { e.stopPropagation(); });
           actions.appendChild(a);
         });
         info.appendChild(actions);
         slide.appendChild(info);
 
-        slide.addEventListener("click", function () { PF.goToProject(p); });
         stage.appendChild(slide);
 
         dots.querySelectorAll(".show-dot").forEach(function (d, i) {
@@ -294,7 +307,7 @@
 
       row.appendChild(media);
       row.appendChild(body);
-      spotWrap.appendChild(PF.staggered(row, 0));
+      spotWrap.appendChild(PF.staggered(row, i));
     });
   }
 
@@ -404,8 +417,7 @@
         svg.setAttribute("viewBox", "0 0 24 24");
         svg.innerHTML = dir < 0 ? '<path d="M15 5l-7 7 7 7"/>' : '<path d="M9 5l7 7-7 7"/>';
         btn.appendChild(svg);
-        btn.addEventListener("click", function (e) {
-          e.stopPropagation();
+        btn.addEventListener("click", function () {
           gi = (gi + dir + slides.length) % slides.length;
           renderPhoto();
         });
@@ -416,8 +428,7 @@
         frame.appendChild(galleryArrow(-1));
         frame.appendChild(galleryArrow(1));
       }
-      frame.addEventListener("click", function () { PF.goToProject(p); });
-      frame.style.cursor = "pointer";
+      frame.appendChild(coverLink(p));
 
       renderPhoto();
       gallery.appendChild(frame);

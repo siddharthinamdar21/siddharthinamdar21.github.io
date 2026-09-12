@@ -109,10 +109,10 @@ img { max-width: 100%; display: block; }
   pointer-events: none;
   background-image: url("../assets/images/art/bg-tile-seamless.webp");
   background-size: 340px;
-  opacity: 0.4;
+  opacity: 0.25;
 }
 /* Tuned per theme by eye - the cream ground reads the linework differently. */
-:root[data-theme="light"]::before { opacity: 0.32; }
+:root[data-theme="light"]::before { opacity: 0.25; }
 
 @media (prefers-reduced-motion: no-preference) {
   :root::before { transition: opacity 0.25s ease; }
@@ -149,6 +149,7 @@ h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.2; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
+  #highlights, #showcaseSection, #spotlight, #projects, #boardgame { transition: none; transform: none; }
   *, *::before, *::after { transition: none !important; animation: none !important; }
   .reveal { opacity: 1; transform: none; }
 }
@@ -318,8 +319,11 @@ h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.2; }
 .show-slide {
   position: relative; width: 100%; aspect-ratio: 21 / 9;
   min-height: 340px; max-height: 500px;
-  animation: slideIn 0.5s ease both; cursor: pointer;
+  animation: slideIn 0.5s ease both;
 }
+/* Real link covering a clickable area. Above the artwork, below .show-info
+   and the arrows and dots, so the buttons and the text stay usable. */
+.cover-link { position: absolute; inset: 0; z-index: 1; }
 .show-slide > img, .show-slide > .thumb-fallback {
   position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
 }
@@ -336,6 +340,7 @@ h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.2; }
 }
 .show-info {
   position: absolute; left: 0; right: 0; bottom: 0; z-index: 2;
+  pointer-events: none;   /* gaps fall through to .cover-link */
   padding: 30px 88px; display: grid; gap: 8px; justify-items: start;
   text-align: left; color: #fff;
 }
@@ -349,7 +354,7 @@ h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.2; }
   display: -webkit-box; -webkit-box-orient: vertical; overflow: hidden;
   -webkit-line-clamp: 2; line-clamp: 2;   /* prefixed for shipping browsers, standard for the spec */
 }
-.show-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
+.show-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; pointer-events: auto; }
 .btn-ghost {
   border-color: rgba(255, 255, 255, 0.55); color: #fff; background: rgba(3, 3, 14, 0.25);
 }
@@ -695,6 +700,33 @@ h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.2; }
 .scope-btn.active .scope-count { background: rgba(0, 0, 0, 0.2); color: #fff; }
 .project-more { display: flex; justify-content: center; margin-top: 36px; }
 
+/* Scope swap: the sections the tab drives fade down, get rebuilt while they are
+   invisible, then fade back up through the normal .reveal transition. The tab bar
+   itself is deliberately not in this list - the control you just pressed should
+   not disappear underneath you. */
+#highlights, #showcaseSection, #spotlight, #projects, #boardgame {
+  transition: opacity 0.26s ease, transform 0.26s ease;
+}
+body.scope-swapping #highlights,
+body.scope-swapping #showcaseSection,
+body.scope-swapping #spotlight,
+body.scope-swapping #projects,
+body.scope-swapping #boardgame { opacity: 0; transform: translateY(14px); }
+
+/* Three labelled tabs with counts cannot sit on one row on a phone, and letting
+   them wrap inside a pill leaves a lopsided 2 + 1. Stack them instead: full
+   width, count pushed to the right, which is also a better touch target. */
+@media (max-width: 620px) {
+  .scope-tabs {
+    width: 100%; flex-direction: column; flex-wrap: nowrap;
+    gap: 2px; padding: 6px; border-radius: var(--radius);
+  }
+  .scope-btn {
+    width: 100%; justify-content: space-between;
+    padding: 13px 18px; font-size: 0.85rem;
+  }
+}
+
 .pd-variants { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
 .pd-variant {
   display: grid; gap: 5px; justify-items: center; width: 104px; padding: 6px;
@@ -897,7 +929,6 @@ h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.2; }
   .nav-links a:not(.btn) { padding: 10px 0; width: 100%; }
 }
 @media (max-width: 640px) {
-  .scope-btn { padding: 10px 15px; font-size: 0.8rem; gap: 7px; }
   .show-slide { aspect-ratio: 4 / 3; min-height: 300px; }
   .show-info { padding: 20px 20px 44px; }
   .show-desc { display: none; }

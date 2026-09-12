@@ -80,7 +80,7 @@
       if (p.tech && p.tech.length) body.appendChild(PF.chipList(p.tech, 4));
 
       card.appendChild(body);
-      grid.appendChild(PF.staggered(card, i % 8));
+      grid.appendChild(PF.staggered(card, i));
     });
 
     if (moreBar) {

@@ -48,7 +48,7 @@ tags, so **load order matters** - core must precede page modules.
 
 `js/core.js` owns the single global `window.PF` and everything shared: path
 helpers, the scope controller, thumbnails, badges, chips, link buttons, scroll
-reveal, icons. Page modules in `js/pages/` consume `PF` and never define globals.
+reveal, icons, and the back-link origin every page records for the detail page. Page modules in `js/pages/` consume `PF` and never define globals.
 A helper moves into core the moment a second page needs it.
 
 **Paths stored in `data/*.js` are root-relative** (`assets/images/x.png`). Anything

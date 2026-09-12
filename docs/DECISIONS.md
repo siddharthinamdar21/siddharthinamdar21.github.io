@@ -101,12 +101,7 @@ shares of `?id=...` show the placeholder title and image.
 **Why:** Fixing it means generating 55 static pages, which is the build step D1
 exists to avoid. The home page preview, the one most often shared, is correct.
 
-### D14 - Detail page back link follows the referrer
-**What:** The link reads the referrer, relabels itself, and navigates via history.
-Direct visits and external referrers keep the default "All projects".
-**Why:** It was hardcoded to the projects page, so entering a project from the home
-page sent the visitor somewhere they had never been. History also restores scroll
-position in the grid they left.
+### D14 - Detail page back link follows the referrer - SUPERSEDED by D20.
 
 ### D15 - No em dashes or en dashes anywhere
 **What:** All 131 occurrences replaced with hyphens, across copy, markup, comments
@@ -120,3 +115,41 @@ served WebP files remain.
 **Why:** 3.3 MB that nothing loads. The trade-off is accepted and worth stating:
 the artwork can no longer be re-derived at a different opacity or tile size
 without regenerating the source art.
+
+### D17 - Scroll reveals are re-armed centrally in `PF.scope.set()`
+**What:** `set()` calls `PF.watchReveals()` after notifying subscribers, rather
+than each subscriber calling it.
+**Why:** Subscribers rebuild sections with `.reveal` (opacity 0). Script order
+decides who renders last, so `grid.js` re-arming for itself left the highlights
+and spotlight permanently invisible after a tab change. A new subscriber now
+needs no reveal handling at all.
+
+### D18 - Scope tabs stack vertically on phones
+**What:** Below 620px the tab bar becomes a full-width vertical list with the
+count pushed right, instead of a wrapping pill.
+**Why:** Three labelled tabs with counts do not fit one row on a phone, and
+wrapping inside a pill gave a lopsided 2 + 1. Stacking also gives a far better
+touch target.
+
+### D19 - Tab swap fades out before rebuilding (extends D17)
+**What:** `PF.scope.set()` adds `.scope-swapping` to fade the four driven sections
+down, rebuilds after 260ms, then arms the reveals two frames later. The tab bar
+itself never fades.
+**Why:** Destroying and rebuilding in one tick read as a jump. The two-frame wait
+matters: without it `.in` lands in the same frame the elements are created, the
+browser never paints opacity 0, and the fade-in is skipped entirely.
+
+### D20 - Back link follows a recorded page, not the referrer (supersedes D14)
+**What:** Every non-detail page writes its own URL to `sessionStorage`. The back
+link reads that, falls back to the referrer, and only goes through history when
+the referrer confirms the previous entry. Direct visits keep "All projects".
+**Why:** The referrer is empty on `file://` and whenever a referrer policy or
+privacy extension strips it, so the link fell back to "All projects" and sent the
+visitor to a page they had never opened. Seen entering a project from the showcase.
+
+### D21 - Clickable areas are real links, never click handlers
+**What:** The showcase slide and the board game frame carry a `.cover-link`
+anchor instead of a click handler. It is `aria-hidden` with `tabindex="-1"`,
+because each area already holds a labelled button to the same project.
+**Why:** A click handler gives no middle click, no open in new tab, no hover
+URL and no keyboard route. `PF.goToProject` went with its last caller.

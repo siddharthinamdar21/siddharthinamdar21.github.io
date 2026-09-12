@@ -74,10 +74,35 @@
 
     onChange: function (fn) { scopeListeners.push(fn); },
 
+    /* Swapping tabs destroys and rebuilds four sections in one tick, which reads
+       as a jump. Fade them down first, rebuild while they are invisible, then let
+       the normal .reveal transition bring the new content back up. */
     set: function (key) {
       if (key === PF.scope.current) return;
       PF.scope.current = key;
-      scopeListeners.forEach(function (fn) { fn(key); });
+
+      var SWAP_MS = 260;
+      var quiet = window.matchMedia &&
+        window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      function rebuild() {
+        scopeListeners.forEach(function (fn) { fn(key); });
+        document.body.classList.remove("scope-swapping");
+        /* Subscribers rebuild with .reveal, which starts at opacity 0 and only
+           clears once the observer sees the element. Re-arming here covers every
+           subscriber; leaving it to them meant whichever listener ran last stayed
+           invisible, since script order decides who renders after the sweep.
+           Waiting two frames lets the browser paint that opacity 0 first,
+           otherwise .in lands in the same frame and the fade never runs. */
+        if (quiet) { PF.watchReveals(); return; }
+        window.requestAnimationFrame(function () {
+          window.requestAnimationFrame(PF.watchReveals);
+        });
+      }
+
+      if (quiet) { rebuild(); return; }
+      document.body.classList.add("scope-swapping");
+      window.setTimeout(rebuild, SWAP_MS);
     },
   };
 
@@ -249,7 +274,24 @@
   function projectUrl(p) { return PF.page("project") + "?id=" + encodeURIComponent(p.id); }
   PF.projectUrl = projectUrl;
 
-  PF.goToProject = function (p) { window.location.href = projectUrl(p); };
+  /* ---------------- Where the visitor came from ----------------
+     The detail page back link used to read document.referrer alone. That is
+     empty on file://, and empty whenever a referrer policy or a privacy
+     extension strips it. The link then fell back to its hardcoded "All
+     projects" and dropped the visitor on a page they had never opened.
+     Every ordinary page now records itself, so the detail page can always
+     name the last real page in this tab. The referrer stays as a fallback. */
+
+  var FROM_KEY = "pf:came-from";
+
+  PF.cameFrom = function () {
+    try { return window.sessionStorage.getItem(FROM_KEY) || ""; } catch (e) { return ""; }
+  };
+
+  /* Detail pages are skipped, so project to project keeps the page before. */
+  if (!/\/pages\/project\//.test(location.pathname)) {
+    try { window.sessionStorage.setItem(FROM_KEY, location.href); } catch (e) {}
+  }
 
   /* ---------------- Scroll reveal ---------------- */
 
@@ -275,7 +317,7 @@
 
   PF.staggered = function (el, index) {
     el.classList.add("reveal");
-    el.style.transitionDelay = Math.min(index * 70, 420) + "ms";
+    el.style.transitionDelay = Math.min(index * 85, 640) + "ms";
     return el;
   };
 
