@@ -466,7 +466,7 @@ h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.2; }
 .pd-role-card p { font-size: 0.95rem; }
 .pd-role-list { list-style: none; display: grid; gap: 9px; font-size: 0.92rem; }
 .pd-role-list li { position: relative; padding-left: 18px; }
-.pd-role-list li::before { content: "b8"; position: absolute; left: 0; color: var(--accent); }
+.pd-role-list li::before { content: "▸"; position: absolute; left: 0; color: var(--accent); }
 .pd-links { display: grid; gap: 10px; }
 .pd-links .btn { width: 100%; }
 
