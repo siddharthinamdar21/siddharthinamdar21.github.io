@@ -15,3 +15,6 @@ desktop.ini
 # These live on YouTube (unlisted); the IDs are in data/projects.js.
 assets/prototype_videos/
 
+# Resume source. Kept out on purpose: docs/ is served by Pages, so committing
+# this would publish a fetchable CV with contact details at a guessable URL.
+docs/Resume.md

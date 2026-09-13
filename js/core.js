@@ -308,7 +308,19 @@
   }
 
   function watchReveals() {
-    document.querySelectorAll(".reveal:not(.in)").forEach(function (el) {
+    var els = document.querySelectorAll(".reveal:not(.in)");
+    var fold = window.innerHeight || 0;
+
+    /* The cascade is for the batch already on screen. A card below the fold
+       reveals as you scroll to it, so a queued delay there is pure lag. Read
+       every position first, then write, to keep this one layout pass. */
+    var queued = [];
+    els.forEach(function (el) {
+      if (el.style.transitionDelay && el.getBoundingClientRect().top > fold) queued.push(el);
+    });
+    queued.forEach(function (el) { el.style.transitionDelay = ""; });
+
+    els.forEach(function (el) {
       if (revealObserver) revealObserver.observe(el);
       else el.classList.add("in");
     });
@@ -317,7 +329,7 @@
 
   PF.staggered = function (el, index) {
     el.classList.add("reveal");
-    el.style.transitionDelay = Math.min(index * 85, 640) + "ms";
+    el.style.transitionDelay = Math.min(index * 40, 240) + "ms";
     return el;
   };
 

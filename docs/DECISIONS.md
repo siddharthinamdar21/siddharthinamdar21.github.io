@@ -160,3 +160,10 @@ Casino entries and Gems of Luna are both excluded. Total projects reads 55.
 **Why:** The casino cards are selected previews from several client casino apps
 rather than a title list, and Gems of Luna was inherited live (D10). The old 12
 matched nothing in the data, and undercounting is what survives an interview.
+
+### D23 - The reveal cascade only applies above the fold (extends D17)
+**What:** `.reveal` now fades over 0.32s and 14px, the stagger is 40ms per item
+capped at 240ms, and `watchReveals()` strips the delay from anything below the fold.
+**Why:** The delay is baked in at creation from the item's index, so on the projects
+page every card past the eighth waited 640ms on top of a 600ms fade each time it
+scrolled into view. That reads as slow loading rather than as a reveal.
