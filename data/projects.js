@@ -911,7 +911,6 @@ const PROJECTS = [
       { src: "assets/images/rise-of-heroes/perk-chart.jpg",    caption: "Perk chart" },
       { src: "assets/images/rise-of-heroes/cards-info.jpg",    caption: "Card reference sheet" },
     ],
-    links: { docs: "https://drive.google.com/drive/folders/1avU7eOpo5g8FEABMyczYxRlOXk9ikMZ7?usp=sharing" },
   },
 
 ];

@@ -51,7 +51,12 @@
 
       if (PROFILE.formspreeId) {
         status.textContent = "Sending…";
-        fetch("https://formspree.io/f/" + PROFILE.formspreeId, {
+        /* Formspree's dashboard shows the full endpoint URL, so that is what
+           gets pasted into profile.js as often as the bare id. Prepending
+           blindly turned one into a 404 and every send failed. */
+        var id = PROFILE.formspreeId;
+        var endpoint = /^https?:\/\//.test(id) ? id : "https://formspree.io/f/" + id;
+        fetch(endpoint, {
           method: "POST",
           body: data,
           headers: { Accept: "application/json" },

@@ -157,6 +157,15 @@
     localStorage.setItem("theme", next);
   });
 
+  /* Back and forward restore a page from the bfcache with the DOM exactly as it
+     was left, so the inline head script never re-runs and a theme switched on
+     another page comes back stale. Re-apply the stored one on restore. */
+  window.addEventListener("pageshow", function (e) {
+    if (!e.persisted) return;
+    var saved = localStorage.getItem("theme");
+    if (saved) document.documentElement.setAttribute("data-theme", saved);
+  });
+
   var navToggle = document.getElementById("navToggle");
   var navLinks = document.getElementById("navLinks");
   navToggle.addEventListener("click", function () {

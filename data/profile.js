@@ -20,12 +20,13 @@ const PROFILE = {
 
   socials: {
     linkedin: "https://www.linkedin.com/in/siddharth-inamdar-476a55230",
-    instagram: "https://www.instagram.com/siddharth_inamdar",
+    instagram: "https://www.instagram.com/_siddharth.inamdar_/",
     facebook: "https://www.facebook.com/siddharth.inamdar.39",
-    github: "",                                // add when ready
+    github: "https://github.com/siddharthinamdar21",
   },
 
   /* Create a free form at formspree.io and paste its ID here (e.g. "xqkrwzyv").
-     While empty, the contact form opens the visitor's email app instead. */
-  formspreeId: "",
+     The full endpoint URL works too. While empty, the contact form opens the
+     visitor's email app instead. */
+  formspreeId: "maeygodr",
 };

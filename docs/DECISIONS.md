@@ -174,3 +174,10 @@ used on the site and on socials. The two-page version stays local in `docs/Resum
 **Why:** Three years at one employer does not fill two pages, and page two repeats
 the project list the site already browses. One PDF also means one place for a claim
 to go stale, which has happened three times already.
+
+### D25 - The theme is re-applied on bfcache restore
+**What:** `core.js` listens for `pageshow` and re-reads the stored theme when
+`event.persisted` is true. Do not delete it as redundant with the inline head script.
+**Why:** Back and forward restore a page from the bfcache with the DOM as it was
+left, so that head script never re-runs. Switching theme on a detail page and
+pressing back brought the old theme back with the restored page.
