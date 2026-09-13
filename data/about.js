@@ -39,7 +39,7 @@ const ABOUT = {
     {
       degree: "MCA",
       school: "ASM's Institute of Business Management and Research, Pune",
-      period: "Pursuing",
+      period: "2024 - 2026",
     },
     {
       degree: "BCA - Game Development",

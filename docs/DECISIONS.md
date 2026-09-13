@@ -167,3 +167,10 @@ capped at 240ms, and `watchReveals()` strips the delay from anything below the f
 **Why:** The delay is baked in at creation from the item's index, so on the projects
 page every card past the eighth waited 640ms on top of a 600ms fade each time it
 scrolled into view. That reads as slow loading rather than as a reveal.
+
+### D24 - One canonical resume PDF, the one-page variant
+**What:** `assets/resume/Siddharth_Inamdar_Resume.pdf` holds the one-page version,
+used on the site and on socials. The two-page version stays local in `docs/Resume.md`.
+**Why:** Three years at one employer does not fill two pages, and page two repeats
+the project list the site already browses. One PDF also means one place for a claim
+to go stale, which has happened three times already.

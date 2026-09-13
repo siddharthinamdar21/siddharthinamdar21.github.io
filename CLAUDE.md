@@ -2,9 +2,9 @@
 
 ## ⚠️ Active hazards
 
-- `assets/resume/Siddharth_Inamdar_Resume.pdf` is a **695-byte placeholder**, not a
-  real CV. The "Download résumé" button in the nav and hero of every page points
-  at it. Replace the file keeping the same name; nothing else needs changing.
+None. The résumé PDF is real as of Sep 2026. Keep the filename
+`assets/resume/Siddharth_Inamdar_Resume.pdf` exactly: the nav and hero of all five
+pages hardcode it, so a renamed export 404s the download button sitewide.
 
 ## Snapshot
 
@@ -113,9 +113,12 @@ Content lives entirely in `data/`. Do not put copy in HTML or JS.
 - **`role` accepts a string or an array.** Arrays render as a bulleted list.
   Both shapes are in use; check before assuming.
 - **Project `id`s are URLs.** Renaming one breaks any link already shared.
-- **`ABOUT.stats` hardcodes counts.** Re-verify them against `data/projects.js`
-  whenever projects are added. Both `12 company titles` and `30+ projects` went
-  stale unnoticed; D22 records what the titles figure counts.
+- **`data/about.js` holds claims that expire.** Counts in `ABOUT.stats` need
+  re-verifying against `data/projects.js` whenever projects are added, and
+  time-based wording (`Pursuing`, years of experience, store availability) goes
+  stale on its own. `12 company titles`, `30+ projects` and an MCA still marked
+  `Pursuing` a term after it ended all slipped through. D22 records what the
+  titles figure counts.
 - **No em dashes or en dashes anywhere** - copy, comments, markup. Owner's
   preference, applied across the whole repo.
 - **Write literal characters in CSS `content:`, not escapes.** A `\25b8` escape
