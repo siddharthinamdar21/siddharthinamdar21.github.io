@@ -22,7 +22,7 @@ const PROFILE = {
     linkedin: "https://www.linkedin.com/in/siddharth-inamdar-476a55230",
     instagram: "https://www.instagram.com/_siddharth.inamdar_/",
     facebook: "https://www.facebook.com/siddharth.inamdar.39",
-    github: "https://github.com/siddharthinamdar21",
+    github: "",
   },
 
   /* Create a free form at formspree.io and paste its ID here (e.g. "xqkrwzyv").
